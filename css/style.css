@@ -38,6 +38,7 @@ transform: translateY(-110%);
     background-color: #F25959;
     border: none;
     text-align: right;
+    pointer-events:none;
   }
 
   #result {
@@ -202,3 +203,6 @@ transform: translateY(-110%);
     width: 12px;
   }
   
+  .aboutMe {
+    color: white;
+  }
