@@ -40,6 +40,8 @@
   <a id="nav-expand" href="#">
     <span class="material-symbols-outlined">menu</span>
   </a>
+  <a onclick="myFunction()" style="display: block;" class="darkModeButton" id="darkModeButton" ><span class="material-symbols-outlined">dark_mode</span></a>
+  <a onclick="myFunction2()" style="display: none;" class="lightModeButton" id="lightModeButton" ><span class="material-symbols-outlined">light_mode</span></a>
   <nav>
     <a id="nav-collapse" href="#">
       <span class="material-symbols-outlined">close</span>
@@ -56,35 +58,35 @@
   <main >
   <div class="container">
   <div class="calculator">
-    <div class="calculation display">
-      <input type="text" id="calculation" readonly>
+    <div id="calcDisplay" class="calculation display">
+      <input type="text" id="calculation" class="display" readonly>
     </div>
-    <div class="result display">
-      <input type="text" id="result" readonly>
+    <div id="resultDisplay" class="result display">
+      <input type="text" id="result" class="display" readonly>
     </div>
-    <div class="buttons">
+    <div class="buttons" id="buttons">
       <div class="numbers">
-        <button onclick="clearResult()">C</button>
-        <button onclick="backspace()">&#8592;</button>
-        <button onclick="percentage()">%</button>
-        <button onclick="addNumber('7')">7</button>
-        <button onclick="addNumber('8')">8</button>
-        <button onclick="addNumber('9')">9</button>
-        <button onclick="addNumber('4')">4</button>
-        <button onclick="addNumber('5')">5</button>
-        <button onclick="addNumber('6')">6</button>
-        <button onclick="addNumber('1')">1</button>
-        <button onclick="addNumber('2')">2</button>
-        <button onclick="addNumber('3')">3</button>
-        <button class="zero" onclick="addNumber('0')">0</button>
-        <button onclick="addNumber('.')">.</button>
+        <button class="darkButton" id="cButton" onclick="clearResult()">C</button>
+        <button class="darkButton" id="backButton" onclick="backspace()">&#8592;</button>
+        <button class="darkButton" id="percentButton" onclick="percentage()">%</button>
+        <button class="darkButton" id="7Button" onclick="addNumber('7')">7</button>
+        <button class="darkButton" id="8Button" onclick="addNumber('8')">8</button>
+        <button class="darkButton" id="9Button" onclick="addNumber('9')">9</button>
+        <button class="darkButton" id="4Button" onclick="addNumber('4')">4</button>
+        <button class="darkButton" id="5Button" onclick="addNumber('5')">5</button>
+        <button class="darkButton" id="6Button" onclick="addNumber('6')">6</button>
+        <button class="darkButton" id="1Button" onclick="addNumber('1')">1</button>
+        <button class="darkButton" id="2Button" onclick="addNumber('2')">2</button>
+        <button class="darkButton" id="3Button" onclick="addNumber('3')">3</button>
+        <button id="zero" class="darkButton" onclick="addNumber('0')">0</button>
+        <button class="darkButton" id="periodButton" onclick="addNumber('.')">.</button>
       </div>
-      <div class="highlight">
-        <button class="operator" onclick="addOperator('/')">&divide</button>
-        <button class="operator" onclick="addOperator('*')">&times</button>
-        <button class="operator" onclick="addOperator('-')">-</button>
-        <button class="operator" onclick="addOperator('+')">+</button>
-        <button class="operator equal" onclick="calculate()">=</button>
+      <div id="highlight" class="highlight">
+        <button class="Operator" id="divideOperator" onclick="addOperator('/')">&divide</button>
+        <button class="Operator" id="timesOperator" onclick="addOperator('*')">&times</button>
+        <button class="Operator" id="minusOperator" onclick="addOperator('-')">-</button>
+        <button class="Operator" id="addOperator" onclick="addOperator('+')">+</button>
+        <button id="equaloOperator" class="Operator equal" onclick="calculate()">=</button>
       </div>
     </div>
   </div>
