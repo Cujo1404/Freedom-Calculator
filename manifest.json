@@ -1,10 +1,10 @@
 { 
 
-  "name": "WebsiteName", 
+  "name": "FreedomCalculator", 
 
-  "short_name": "WebName", 
+  "short_name": "Freedom", 
 
-  "start_url": "https://DomainName", 
+  "start_url": "https://cujo1404.github.io/Freedom-Calculator/", 
 
   "display": "standalone"
 
