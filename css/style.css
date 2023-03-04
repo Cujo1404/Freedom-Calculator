@@ -256,3 +256,11 @@ transform: translateY(-110%);
     color: white;
     border: 5px #333333 solid;
   }
+
+  input {
+    border-radius: 0;
+  }
+  
+  input[type="search"] {
+    -webkit-appearance: none;
+  }
