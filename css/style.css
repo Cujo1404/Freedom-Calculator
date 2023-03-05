@@ -2,7 +2,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F25959;
+    background-color: #A083D5;
   }
   .container {
     width: 100%;
@@ -40,7 +40,7 @@ transform: translateY(-110%);
   }
 
   .display {
-    background-color: #F25959;
+    background-color: #A083D5;
     /* margin-bottom: 10px; */
   }
 
@@ -61,7 +61,7 @@ transform: translateY(-110%);
     font-size: 24px;
     border-radius: 300px;
     font-weight: bold;
-    background-color: #F25959;
+    background-color: #A083D5;
     color: white;
     border-width: 0;
     border-style: none;
@@ -78,7 +78,7 @@ transform: translateY(-110%);
     margin-right: auto;
   }
   .equal{
-    background-color: white;
+    background-color: #F4E064;
     color: black;
   }
 
@@ -92,17 +92,17 @@ transform: translateY(-110%);
   }
   
   button:active {
-    background-color: #F25959;
+    background-color: #A083D5;
     cursor: pointer;
     box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.4) inset;
     transition-duration: 0.1s;
   }
 
   .highlight {
-    background-color: #D30000;
+    background-color: #9470CE;
     border-radius: 50px;
     margin-left: -40px;
-    border: 5px #D30000 solid;
+    border: 5px #9470CE solid;
   }
 
 
@@ -122,7 +122,7 @@ transform: translateY(-110%);
     width: 100px;
     height: 100px;
     border-radius: 20px;
-    background-color: #F25959;
+    background-color: #A083D5;
     margin-left: auto;
     margin-right: auto;
   }
@@ -247,7 +247,7 @@ transform: translateY(-110%);
   }
 
   .darkModeEqual {
-    background-color: #F25959;
+    background-color: #A083D5;
     color: white;
   }
 
