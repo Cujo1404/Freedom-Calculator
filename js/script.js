@@ -97,10 +97,6 @@ function myFunction() {
   element.classList.toggle("darkMode");
   var element = document.getElementById("result");
   element.classList.toggle("darkMode");
-  // var element = document.getElementById("darkModeButton");
-  // element.classList.toggle("hide");
-  // var element = document.getElementById("lightModeButton");
-  // element.classList.toggle("show");
   var x = document.getElementById("darkModeButton");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -162,10 +158,6 @@ function myFunction2() {
   element.classList.toggle("darkMode");
   var element = document.getElementById("result");
   element.classList.toggle("darkMode");
-  // var element = document.getElementById("darkModeButton");
-  // element.classList.toggle("show");
-  // var element = document.getElementById("lightModeButton");
-  // element.classList.toggle("hide");
   var x = document.getElementById("darkModeButton");
   if (x.style.display === "none") {
     x.style.display = "block";
@@ -179,3 +171,52 @@ function myFunction2() {
     x.style.display = "none";
   }
 }
+
+
+
+// swipe to backspace code 
+
+function detectSwipe(element, callback) {
+  var touchsurface = element,
+  swipedir,
+  startX,
+  distX,
+  threshold = 100, //required min distance traveled to be considered swipe
+  restraint = 50, // maximum distance allowed at the same time in perpendicular direction
+  allowedTime = 300, // maximum time allowed to travel that distance
+  elapsedTime,
+  startTime,
+  handleswipe = callback || function(swipedir) {};
+
+  touchsurface.addEventListener('touchstart', function(e) {
+    var touchobj = e.changedTouches[0];
+    swipedir = 'none';
+    startX = touchobj.pageX;
+    startTime = new Date().getTime(); // record time when finger first makes contact with surface
+  }, false);
+
+  touchsurface.addEventListener('touchmove', function(e) {
+    // prevent scrolling when inside DIV
+    e.preventDefault();
+  }, false);
+
+  touchsurface.addEventListener('touchend', function(e) {
+    var touchobj = e.changedTouches[0];
+    distX = touchobj.pageX - startX; // get horizontal dist traveled by finger while in contact with surface
+    elapsedTime = new Date().getTime() - startTime; // get time elapsed
+    if (elapsedTime <= allowedTime) {
+      if (Math.abs(distX) >= threshold && Math.abs(touchobj.pageY - startY) <= restraint) {
+        swipedir = (distX < 0) ? 'left' : 'right';
+      }
+    }
+    handleswipe(swipedir);
+  }, false);
+}
+
+var swipeArea = document.getElementById('resultDisplay');
+
+detectSwipe(swipeArea, function(swipedir) {
+  if (swipedir == 'right') {
+    result.value = result.value.slice(0, -1);
+  }
+});
