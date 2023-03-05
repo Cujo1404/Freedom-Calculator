@@ -246,6 +246,6 @@ var swipeArea = document.getElementById('resultDisplay');
 detectSwipe(swipeArea, function(swipedir) {
   if (swipedir == 'right') {
     result.value = result.value.slice(0, -1);
-    console.log('Right swipe detected!');
+    // console.log('Right swipe detected!');
   }
 });
